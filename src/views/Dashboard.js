@@ -53,40 +53,6 @@ export const Dashboard = ({viewIndex, navToView, setQb}) => {
             defDashboardItemBehavior[index].onArrowDown = () => setState(prevState => moveDown(prevState));
             defDashboardItemBehavior[index].onArrowRight = () => setState(prevState => moveDown(prevState));
         })
-        // defDashboardItemBehavior.forEach((item, index) => {
-        //     item.onKeyLeft = () => {
-        //         if (viewIndex > 0) {
-        //             navToView(viewIndex - 1);
-        //         }
-        //     };
-        //     item.onKeyRight = () => {
-        //         if (item.right === 'MENU') {
-        //             setState(prevState => {
-        //                 const newState = {
-        //                     ...prevState,
-        //                     activeView: 'menu',
-        //                     showMenu: true,
-        //                     prevActiveViewItem: prevState.activeViewItem,
-        //                     activeViewItem: 0,
-        //                 };
-        //                 newState.dashboardNavItems[prevState.activeViewItem].focus = false;
-        //                 newState.menuNavItems[newState.activeViewItem].focus = true;
-        //                 return newState;
-        //             })
-        //         }
-        //     };
-        //     item.onKeyCenter = () => {
-        //         setState({...initialState});
-        //         setQb(index);
-        //         navToView(1);
-        //     };
-        //     item.onArrowUp = () => setState(prevState => moveUp(prevState));
-        //     item.onArrowLeft = () => setState(prevState => moveUp(prevState));
-        //     item.onArrowDown = () => setState(prevState => moveDown(prevState));
-        //     item.onArrowRight = () => setState(prevState => moveDown(prevState));
-        // });
-
-
         setState(initialState => ({
             ...initialState,
             dashboardNavItems: defDashboardItemBehavior,

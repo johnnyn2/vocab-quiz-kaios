@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import {qb} from '../qoa/qoa';
 import {Question} from '../views/Question';
 import {SoftKeys} from '../components/SoftKeys';
@@ -9,13 +9,6 @@ export const Easy = ({viewIndex, navToView, type}) => {
     const [ans, setAns] = useState('');
     const [showAns, setShowAns] = useState(false);
     const [currentRef, setCurrentRef] = useState(0);
-
-    useEffect(() => {
-        if(showAns) {
-            document.body.focus();
-            document.body.click();
-        } 
-    }, [showAns])
 
     const qustionBank = qb[type];
     return (
@@ -60,6 +53,9 @@ export const Easy = ({viewIndex, navToView, type}) => {
                                 setShowAns(true);
                                 if (qustionBank[currentQuestion].a === ans) {
                                     setScore(score + 1);
+                                }
+                                if (currentQuestion === qustionBank.length - 1) {
+                                    alert(`This is the end of the quiz. Total score is ${score}. Please press left key to return.`);
                                 }
                             } else {
                                 alert('Please answer!');

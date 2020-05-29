@@ -1,0 +1,27 @@
+{
+  "name": "Vocab Quiz",
+   "version": "0.0.1",
+  "description": "",
+  "subtitle": "",
+  "launch_path": "/index.html",
+  "icons": {
+    "56": "/icons/kaios_56.png",
+    "112": "/icons/kaios_112.png"
+  },
+  "theme_color": "#65ACFF",
+  "developer": {
+    "name": "Johnny Ho",
+    "url": ""
+  },
+  "type": "web",
+  "fullscreen": "true",
+  "locales": {
+    "en-US": {
+      "name": "Vocab Quiz",
+      "description": "",
+      "subtitle": ""
+    }
+  },
+  "default_locale": "en-US",
+  "orientation": [ "portrait-primary" ]
+}

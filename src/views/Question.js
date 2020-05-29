@@ -5,11 +5,11 @@ export const Question = ({n, q, o, a, showAns, opt, score, currentRef}) => {
     const oRef = useRef(null);
     const aRef = useRef(null);
     useEffect(() => {
-        if (currentRef === 0) {
+        if (currentRef === 0 && qRef.current) {
             qRef.current.scrollIntoView({behavior: 'smooth'});
-        } else if (currentRef === 1) {
+        } else if (currentRef === 1 && oRef.current) {
             oRef.current.scrollIntoView({behavior: 'smooth'});
-        } else {
+        } else if (aRef.current) {
             aRef.current.scrollIntoView({behavior: 'smooth'});
         }
     }, [currentRef])
